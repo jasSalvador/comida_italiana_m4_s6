@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script defer src="./assets/js/script.js"></script>
+    <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="./assets/img/Recipe-Caprese.jpg">
+    <title>Comida Italiana</title>
+</head>
+<body>
+    <section class="contenedor pb-5">
+        <main class="col-9 mx-auto">
+            <h1 class="text-center fw-bold py-5 mx-auto">Comida Italiana</h1>
+            <!--bebidas-->
+            <div class="bebidas bg-white pb-5 mb-5">
+                <div class="titulo-bebidas p-5" id="bebidas">
+                    <h3>Elige algo para beber</h3>
+                    <h5>Disfruta de nuestra clásica selección de tragos.</h5>
+                </div>
+                <div class="px-5 mx-auto">
+                    <table class="table border">
+                        <tbody>
+                            <tr>
+                                <td class="px-3"><input type="checkbox" name="Martini" class="me-2" id="checkMartini"
+                                        value="2550" onchange="cuenta()">Martini</td>
+                                <td class="text-end px-3">$2.550</td>
+                            </tr>
+                            <tr>
+                                <td class="px-3"><input type="checkbox" name="Cappuccino" class="me-2"
+                                        id="checkCappuccino" value="1370" onchange="cuenta()">Cappuccino</td>
+                                <td class="text-end px-3">$1370</td>
+                            </tr>
+                            <tr>
+                                <td class="px-3"><input type="checkbox" name="Latte" class="me-2" id="checkLatte"
+                                        value="1350" onchange="cuenta()">Latte</td>
+                                <td class="text-end px-3">$1.350</td>
+                            </tr>
+                            <tr>
+                                <td class="px-3"><input type="checkbox" name="Mojito" class="me-2" id="checkMojito"
+                                        value="2290" onchange="cuenta()">Mojito</td>
+                                <td class="text-end px-3">$2.290</td>
+                            </tr>
+                        </body>
+                    </table>
+                </div>
+            </div>
+
+            <!--menu-->
+            <div class="menu bg-white pb-5 mb-5">
+                <div class="titulo-menu p-5" id="menu">
+                    <h3>Menú</h3>
+                    <h5>Disfruta de la mejor cocina italiana.</h5>
+                </div>
+                <div class="px-5">
+                    <table class="table border">
+                        <tbody>
+                            <tr>
+                                <td class="px-3">
+                                    <input type="checkbox" name="Insalata di riso" id="checkRiso" value="6750" onchange="cuenta()">
+                                    <h4>Insalata de riso</h4>
+                                    <div class="descripcion d-flex justify-content-evenly align-items-center mx-auto">
+                                        <p>L'insalata di riso é un classico delle ricette estive. Veloce e facile de
+                                            preparare l'insalata di riso si puó insaporire con gil ingresienti piú vari.
+                                        </p>
+                                        <img class="rounded-circle d-block" src="./assets/img/insalata-di-riso.jpg" alt="Insalata de riso">
+                                    </div>
+                                    <p>$6.750</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-3">
+                                    <input type="checkbox" name="Insalata ai cipollotti" id="checkCipollotti" value="5990" onchange="cuenta()">
+                                    <h4>Insalata ai cipollotti</h4>
+                                    <div class="descripcion d-flex justify-content-evenly align-items-center mx-auto">
+                                        <p>Piú delicati delle cipolle, i cipollotti sono perfetti in insalata,
+                                            sul pesce e suila carne.
+                                        </p>
+                                        <img class="rounded-circle d-block" src="./assets/img/ai-cipollotti.jpg" alt="Insalata de riso">
+                                    </div>
+                                    <p>$5.990</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-3">
+                                    <input type="checkbox" name="Insalata caprese" id="checkcaprese" value="8250" onchange="cuenta()">
+                                    <h4>Insalata caprese</h4>
+                                    <div class="descripcion d-flex justify-content-evenly align-items-center mx-auto">
+                                        <p>Queso piatto é un cuito della cittá pertenopea dove la
+                                            mozzarella é protagonista di moitissimi piatti.
+                                        </p>
+                                        <img class="rounded-circle d-block" src="./assets/img/Recipe-Caprese.jpg" alt="Insalata de riso">
+                                    </div>
+                                    <p>$8.250</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--cuenta-->
+            <div class="bg-white pb-5">
+                <div class="titulo-cuenta p-5" id="cuenta">
+                    <h3>Cuenta</h3>
+                    <h5>Esperamos que disfrute de su comida ¡Ciao!</h5>
+                </div>
+                <div class="px-5 mx-auto">
+                    <table class="table">
+                        <thead class="">
+                            <tr>
+                                <th>Item</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody id="insertarDatos" class=""></body>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </section>
+</body>
+</html>
